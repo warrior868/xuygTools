@@ -1,0 +1,21 @@
+﻿<Window x:Class="XuygTools.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XuygTools"
+        mc:Ignorable="d"
+        Title="贰拾壹" Height="1000" Width="800" Background="White" Visibility="Visible" AllowsTransparency="True" WindowStyle="None" >
+    <Grid x:Name="DragArea" HorizontalAlignment="Left" Height="222" VerticalAlignment="Top" Width="800">
+        <Rectangle HorizontalAlignment="Left" Height="284" VerticalAlignment="Top" Width="800" StrokeThickness="3" Margin="0,0,0,-62">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="PIC/timg.jpg" Stretch="Uniform"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="button" Content="一键创建项目文件夹" Click="button_Click" Background="{x:Null}" Foreground="#FF575757" BorderThickness="0,0,0,5" Margin="640,327,24,-144" Width="Auto" BorderBrush="#FF026474" RenderTransformOrigin="0.5,0.487" FontWeight="Bold"/>
+        <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="0,222,0,-44" VerticalAlignment="Top" Width="800" OpacityMask="Black" Background="#FF5093B2" Foreground="White" BorderBrush="#00000000" Height="44" FontSize="22" ClickMode="Press" Click="exitButton_Click"/>
+        <TextBox x:Name="filePathForProject" Margin="269,339,177,-144" TextWrapping="Wrap" Text="TextBox" Width="354" BorderThickness="0,0,0,3" VerticalContentAlignment="Center" Padding="0,0,0,3"/>
+        <TextBox x:Name="projectName" Margin="110,339,584,-144" TextWrapping="Wrap" Text="TextBox" BorderThickness="0,0,0,3" VerticalContentAlignment="Center" Padding="0,0,0,3" ToolTip="课题名称（课题号+简要名称）"/>
+        <Button x:Name="getPathBUT" Content="获取路径" Click="getPathBUT_Click" Background="{x:Null}" Foreground="#FF575757" BorderThickness="0,2,0,0" Margin="558,335,177,-140" Width="Auto" BorderBrush="#FF026474" RenderTransformOrigin="0.5,0.487"/>
+    </Grid>
+</Window>
