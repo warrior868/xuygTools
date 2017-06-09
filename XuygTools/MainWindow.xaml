@@ -5,17 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XuygTools"
         mc:Ignorable="d"
-        Title="贰拾壹" Height="1000" Width="800" Background="White" Visibility="Visible" AllowsTransparency="True" WindowStyle="None" >
+        Title="贰拾壹" Height="919" Width="800" Visibility="Visible" AllowsTransparency="True" WindowStyle="None" >
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid x:Name="DragArea" HorizontalAlignment="Left" Height="222" VerticalAlignment="Top" Width="800">
-        <Rectangle HorizontalAlignment="Left" Height="284" VerticalAlignment="Top" Width="800" StrokeThickness="3" Margin="0,0,0,-62">
+        <Rectangle HorizontalAlignment="Left" Height="284" VerticalAlignment="Top" Width="800" StrokeThickness="3" Margin="0,-5,0,-57">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="PIC/timg.jpg" Stretch="Uniform"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Button x:Name="button" Content="一键创建项目文件夹" Click="button_Click" Background="{x:Null}" Foreground="#FF575757" BorderThickness="0,0,0,5" Margin="640,327,24,-144" Width="Auto" BorderBrush="#FF026474" RenderTransformOrigin="0.5,0.487" FontWeight="Bold"/>
-        <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="0,222,0,-44" VerticalAlignment="Top" Width="800" OpacityMask="Black" Background="#FF5093B2" Foreground="White" BorderBrush="#00000000" Height="44" FontSize="22" ClickMode="Press" Click="exitButton_Click"/>
-        <TextBox x:Name="filePathForProject" Margin="269,339,177,-144" TextWrapping="Wrap" Text="TextBox" Width="354" BorderThickness="0,0,0,3" VerticalContentAlignment="Center" Padding="0,0,0,3"/>
-        <TextBox x:Name="projectName" Margin="110,339,584,-144" TextWrapping="Wrap" Text="TextBox" BorderThickness="0,0,0,3" VerticalContentAlignment="Center" Padding="0,0,0,3" ToolTip="课题名称（课题号+简要名称）"/>
-        <Button x:Name="getPathBUT" Content="获取路径" Click="getPathBUT_Click" Background="{x:Null}" Foreground="#FF575757" BorderThickness="0,2,0,0" Margin="558,335,177,-140" Width="Auto" BorderBrush="#FF026474" RenderTransformOrigin="0.5,0.487"/>
+        <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="389,162,0,0" VerticalAlignment="Top" Width="66" OpacityMask="Black" Background="#005093B2" Foreground="White" BorderBrush="#00000000" Height="30" FontSize="22" ClickMode="Press" Click="exitButton_Click" RenderTransformOrigin="0.424,0.483"/>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="705" Margin="0,212,0,-695" VerticalAlignment="Top" Width="800">
+            <TabItem Header="TabItem" Margin="-2,-2,-64,0">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="White" Margin="0,0,-2,-4">
+                    <Grid Margin="10,38,10,561" Background="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="37*"/>
+                            <RowDefinition Height="45*"/>
+                        </Grid.RowDefinitions>
+                        <Button x:Name="createFilesBUT" Content="一键创建项目文件夹" Click="createFilesBUT_Click" Background="{x:Null}" Foreground="#FF575757" BorderThickness="0,0,0,5" Margin="582,28,59,24" Width="120" BorderBrush="#FF026474" RenderTransformOrigin="0.5,0.487" FontWeight="Bold" Height="30" Grid.RowSpan="2"/>
+                        <TextBox x:Name="filePathForProject" Margin="10,8,275,2" TextWrapping="Wrap" Text="C:\Users\Administrator\Desktop" BorderThickness="0,0,0,3" VerticalContentAlignment="Center" Padding="0,0,0,3" RenderTransformOrigin="0.494,0.95" Grid.Row="1"/>
+                        <TextBox x:Name="projectName" Margin="10,10,549,42" TextWrapping="Wrap" Text="HD001" BorderThickness="0,0,0,3" VerticalContentAlignment="Center" Padding="0,0,0,3" ToolTip="课题名称（课题号+简要名称）" Height="30" RenderTransformOrigin="0.621,0.417" Grid.RowSpan="2" />
+                        <Button x:Name="getPathBUT" Content="获取路径" Click="getPathBUT_Click" Background="{x:Null}" Foreground="#FF575757" BorderThickness="0,2,0,0" Margin="386,8,275,7" Width="100" BorderBrush="#FF026474" RenderTransformOrigin="2.09,0.583" Height="30" Grid.Row="1"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabItem" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="114" Margin="84,0,-104,0">
+                <Grid Background="White"/>
+            </TabItem>
+            <TabItem Header="About" RenderTransformOrigin="1.19,0.25" Margin="530,0,-530,-2" HorizontalAlignment="Left" Width="110">
+                <Grid Margin="234,119,220,169">
+                    <Ellipse HorizontalAlignment="Left" Height="143" VerticalAlignment="Top" Width="143" Stroke="#FFF3F3F3" Margin="88,131,0,0">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="PIC/p21lOGO.jpg" Stretch="Uniform"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Label x:Name="label" Content="Design &amp; Program By  21er&#xD;&#xA;Mail：worrior868@163.com" Margin="88,279,82,65" Foreground="#FF7C7979"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
